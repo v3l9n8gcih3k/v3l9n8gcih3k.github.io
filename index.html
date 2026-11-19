@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tickling - 品牌官方_轻松互动影像社区</title>
+<meta name="description" content="tickling官方网站，专注轻松互动影像内容的视频品牌社区，汇聚原创创作者，呈现温暖真实的快乐影像与内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff7a59'/%3E%3Ccircle cx='24' cy='26' r='6' fill='%23fff3e8'/%3E%3Ccircle cx='42' cy='26' r='6' fill='%23fff3e8'/%3E%3Cpath d='M18 42q14 12 28 0' stroke='%23fff3e8' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tk-coral:#ff7a59;
+  --tk-coral-deep:#e85c3a;
+  --tk-amber:#ffb347;
+  --tk-cream:#fff8f1;
+  --tk-ink:#2c2420;
+  --tk-ink-soft:#6b5d55;
+  --tk-line:#f0e2d6;
+  --tk-card:#ffffff;
+  --tk-mint:#4cae9a;
+  --tk-shadow:0 10px 30px rgba(232,92,58,.10);
+  --tk-radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--tk-cream);
+  color:var(--tk-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:target{scroll-margin-top:130px}
+h1,h2,h3,h4{line-height:1.35;letter-spacing:.2px}
+.tk-wrap{width:min(1180px,92%);margin:0 auto}
+.tk-section{padding:74px 0}
+.tk-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.tk-section-head h2{font-size:clamp(24px,3vw,34px)}
+.tk-section-head p{color:var(--tk-ink-soft);font-size:15px;max-width:520px}
+.tk-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--tk-coral-deep);text-transform:uppercase;margin-bottom:10px}
+.tk-eyebrow::before{content:"";width:22px;height:2px;background:var(--tk-coral);border-radius:2px}
+.tk-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:.25s;border:2px solid transparent}
+.tk-btn-primary{background:linear-gradient(135deg,var(--tk-coral),var(--tk-amber));color:#fff;box-shadow:0 8px 20px rgba(255,122,89,.32)}
+.tk-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,122,89,.42)}
+.tk-btn-ghost{border-color:var(--tk-coral);color:var(--tk-coral-deep);background:#fff}
+.tk-btn-ghost:hover{background:#fff0e8}
+.tk-tag{display:inline-block;font-size:12px;padding:3px 12px;border-radius:999px;background:#fff0e8;color:var(--tk-coral-deep);font-weight:600;margin:0 6px 6px 0}
+
+/* ---------- 吸顶：公告条 + 页头 ---------- */
+.tk-sticky{position:sticky;top:0;z-index:60}
+.tk-notice{
+  background:var(--tk-ink);
+  color:#ffe9dd;
+  font-size:13.5px;
+  padding:9px 0;
+}
+.tk-notice .tk-wrap{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap;text-align:center}
+.tk-notice b{color:var(--tk-amber)}
+.tk-notice .tk-notice-dot{width:7px;height:7px;border-radius:50%;background:var(--tk-mint);box-shadow:0 0 0 4px rgba(76,174,154,.25);flex:none}
+.tk-header{background:rgba(255,248,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--tk-line);box-shadow:0 2px 12px rgba(44,36,32,.04)}
+.tk-nav{display:flex;align-items:center;gap:26px;padding:14px 0}
+.tk-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;flex:none}
+.tk-logo-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--tk-coral),var(--tk-amber));display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;box-shadow:0 6px 14px rgba(255,122,89,.3)}
+.tk-logo small{display:block;font-size:10.5px;font-weight:500;color:var(--tk-ink-soft);letter-spacing:1.6px}
+.tk-menu{display:flex;gap:4px;list-style:none;margin-left:auto}
+.tk-menu a{display:block;padding:8px 14px;border-radius:999px;font-size:15px;color:var(--tk-ink-soft);font-weight:500;transition:.2s}
+.tk-menu a:hover{background:#fff0e8;color:var(--tk-coral-deep)}
+.tk-nav-tools{display:flex;align-items:center;gap:10px;flex:none}
+.tk-search{position:relative;display:flex;align-items:center}
+.tk-search input{
+  width:172px;padding:9px 40px 9px 16px;border-radius:999px;border:1.5px solid var(--tk-line);
+  background:#fff;font-size:14px;color:var(--tk-ink);outline:none;transition:.25s;font-family:inherit;
+}
+.tk-search input:focus{border-color:var(--tk-coral);width:210px;box-shadow:0 0 0 4px rgba(255,122,89,.12)}
+.tk-search button{position:absolute;right:5px;width:30px;height:30px;border-radius:50%;background:var(--tk-coral);color:#fff;display:grid;place-items:center;font-size:14px}
+.tk-search-hint{
+  position:absolute;top:calc(100% + 10px);right:0;width:250px;background:#fff;border-radius:14px;
+  box-shadow:0 14px 34px rgba(44,36,32,.16);padding:12px;font-size:13.5px;color:var(--tk-ink-soft);
+  display:none;border:1px solid var(--tk-line);z-index:70;
+}
+.tk-search-hint.show{display:block}
+.tk-search-hint strong{color:var(--tk-coral-deep);display:block;margin-bottom:6px;font-size:14px}
+.tk-menu-toggle{display:none;width:42px;height:42px;border-radius:12px;background:#fff0e8;color:var(--tk-coral-deep);font-size:20px;place-items:center}
+
+/* ---------- 首屏 ---------- */
+.tk-hero{padding:64px 0 70px;position:relative;overflow:hidden}
+.tk-hero::before{
+  content:"";position:absolute;right:-140px;top:-120px;width:480px;height:480px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,179,71,.28),rgba(255,122,89,.05) 70%);
+  z-index:0;
+}
+.tk-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;position:relative;z-index:1}
+.tk-hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:900;letter-spacing:1px}
+.tk-hero h1 span{background:linear-gradient(120deg,var(--tk-coral),var(--tk-amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tk-hero-slogan{font-size:clamp(17px,2vw,21px);font-weight:700;color:var(--tk-coral-deep);margin:14px 0 6px;letter-spacing:1px}
+.tk-hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--tk-line);border-radius:999px;padding:5px 16px;font-size:13px;font-weight:600;color:var(--tk-ink-soft);margin-bottom:18px}
+.tk-hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--tk-mint);display:inline-block}
+.tk-hero-desc{font-size:15.5px;color:var(--tk-ink-soft);margin:18px 0 26px;max-width:520px}
+.tk-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.tk-hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+.tk-hero-stats div strong{display:block;font-size:28px;font-weight:900;color:var(--tk-coral-deep);line-height:1.2}
+.tk-hero-stats div span{font-size:13px;color:var(--tk-ink-soft)}
+.tk-hero-visual{position:relative}
+.tk-hero-frame{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 24px 50px rgba(232,92,58,.22);border:6px solid #fff}
+.tk-hero-frame img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.tk-hero-float{
+  position:absolute;left:-22px;bottom:26px;background:#fff;border-radius:16px;padding:12px 18px;
+  box-shadow:0 14px 30px rgba(44,36,32,.16);display:flex;align-items:center;gap:12px;
+}
+.tk-hero-float b{font-size:22px;color:var(--tk-coral-deep)}
+.tk-hero-float span{font-size:12.5px;color:var(--tk-ink-soft);line-height:1.4}
+.tk-hero-pill{
+  position:absolute;right:-14px;top:24px;background:var(--tk-ink);color:#ffe9dd;border-radius:999px;
+  padding:8px 18px;font-size:13px;font-weight:600;box-shadow:0 10px 24px rgba(44,36,32,.28);
+}
+
+/* ---------- 品牌解析 ---------- */
+.tk-about{background:#fff;border-radius:28px;padding:clamp(28px,4vw,54px);box-shadow:var(--tk-shadow);border:1px solid var(--tk-line)}
+.tk-about h2{font-size:clamp(23px,2.8vw,32px);margin-bottom:8px}
+.tk-about-lead{font-size:16.5px;font-weight:600;color:var(--tk-coral-deep);margin-bottom:20px}
+.tk-about p{font-size:15px;color:#4d423c;margin-bottom:16px;text-align:justify}
+.tk-about-keys{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tk-about-keys span{background:#fff5ee;border:1px solid #ffe0cf;border-radius:999px;padding:6px 15px;font-size:13.5px;color:var(--tk-coral-deep);font-weight:600}
+
+/* ---------- 焦点内容 ---------- */
+.tk-focus-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:24px}
+.tk-focus-main{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--tk-shadow);background:#000}
+.tk-focus-main img{width:100%;aspect-ratio:16/10;object-fit:cover;opacity:.92}
+.tk-focus-info{position:absolute;inset:auto 0 0 0;padding:26px 24px 22px;background:linear-gradient(transparent,rgba(28,18,14,.86));color:#fff}
+.tk-focus-info h3{font-size:22px;margin-bottom:8px}
+.tk-focus-info p{font-size:13.5px;opacity:.86;margin-bottom:12px}
+.tk-focus-info .tk-meta{display:flex;gap:16px;font-size:12.5px;opacity:.8;flex-wrap:wrap}
+.tk-focus-side{display:grid;gap:18px;grid-template-columns:1fr 1fr;align-content:start}
+.tk-mini-card{background:var(--tk-card);border-radius:16px;overflow:hidden;border:1px solid var(--tk-line);transition:.25s;display:flex;flex-direction:column}
+.tk-mini-card:hover{transform:translateY(-4px);box-shadow:var(--tk-shadow)}
+.tk-mini-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.tk-mini-card .tk-mini-body{padding:12px 14px 14px;flex:1;display:flex;flex-direction:column}
+.tk-mini-card h4{font-size:14.5px;margin-bottom:6px;line-height:1.5}
+.tk-mini-card p{font-size:12.5px;color:var(--tk-ink-soft);line-height:1.55;flex:1}
+.tk-mini-card .tk-mini-foot{margin-top:10px;font-size:12px;color:var(--tk-ink-soft);display:flex;justify-content:space-between;align-items:center}
+
+/* ---------- 视频流 ---------- */
+.tk-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tk-video-card{background:var(--tk-card);border-radius:20px;overflow:hidden;border:1px solid var(--tk-line);transition:.28s;display:flex;flex-direction:column}
+.tk-video-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(232,92,58,.15)}
+.tk-cover{position:relative;overflow:hidden}
+.tk-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.4s}
+.tk-video-card:hover .tk-cover img{transform:scale(1.04)}
+.tk-cover-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.9);
+  display:grid;place-items:center;color:var(--tk-coral-deep);font-size:19px;
+  padding-left:4px;box-shadow:0 8px 20px rgba(0,0,0,.2);transition:.25s;
+}
+.tk-video-card:hover .tk-cover-play{background:var(--tk-coral);color:#fff}
+.tk-cover-tag{position:absolute;top:10px;left:10px;background:rgba(44,36,32,.82);color:#fff;font-size:11.5px;padding:3px 11px;border-radius:999px;backdrop-filter:blur(4px)}
+.tk-cover-time{position:absolute;bottom:10px;right:10px;background:rgba(44,36,32,.78);color:#fff;font-size:11.5px;padding:2px 9px;border-radius:6px}
+.tk-video-body{padding:16px 18px 16px;display:flex;flex-direction:column;flex:1}
+.tk-video-body h3{font-size:16px;margin-bottom:7px;line-height:1.5}
+.tk-video-body .tk-excerpt{font-size:13px;color:var(--tk-ink-soft);line-height:1.6;flex:1;margin-bottom:10px}
+.tk-card-tags{margin-bottom:8px}
+.tk-video-foot{display:flex;align-items:center;gap:9px;border-top:1px dashed var(--tk-line);padding-top:11px;font-size:12.5px;color:var(--tk-ink-soft)}
+.tk-avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700;flex:none}
+.tk-video-foot .tk-author{font-weight:600;color:var(--tk-ink)}
+.tk-actions{margin-left:auto;display:flex;gap:10px}
+.tk-actions button{display:flex;align-items:center;gap:4px;font-size:12.5px;color:var(--tk-ink-soft);transition:.2s}
+.tk-actions button:hover{color:var(--tk-coral-deep)}
+.tk-actions button.liked{color:var(--tk-coral-deep);font-weight:700}
+.tk-actions button.saved{color:var(--tk-mint);font-weight:700}
+.tk-filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tk-filter-bar button{padding:7px 18px;border-radius:999px;background:#fff;border:1.5px solid var(--tk-line);font-size:13.5px;color:var(--tk-ink-soft);font-weight:600;transition:.2s}
+.tk-filter-bar button.active,.tk-filter-bar button:hover{background:var(--tk-coral);border-color:var(--tk-coral);color:#fff}
+
+/* ---------- 专题 ---------- */
+.tk-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tk-topic{position:relative;border-radius:18px;overflow:hidden;min-height:250px;display:flex;align-items:flex-end;box-shadow:var(--tk-shadow)}
+.tk-topic:nth-child(1){grid-column:span 2;min-height:290px}
+.tk-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tk-topic-shade{position:absolute;inset:0;background:linear-gradient(transparent 26%,rgba(28,18,14,.88))}
+.tk-topic-body{position:relative;padding:22px;color:#fff}
+.tk-topic-body h3{font-size:18px;margin-bottom:6px}
+.tk-topic:nth-child(1) .tk-topic-body h3{font-size:24px}
+.tk-topic-body p{font-size:12.8px;opacity:.85;line-height:1.6;margin-bottom:10px}
+.tk-topic-state{display:inline-block;font-size:11.5px;padding:3px 11px;border-radius:999px;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35)}
+
+/* ---------- 创作者 ---------- */
+.tk-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.tk-creator-card{background:#fff;border-radius:20px;padding:26px 20px;text-align:center;border:1px solid var(--tk-line);transition:.28s;position:relative}
+.tk-creator-card:hover{transform:translateY(-6px);box-shadow:var(--tk-shadow);border-color:#ffd8c4}
+.tk-creator-avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:28px;font-weight:800;color:#fff;box-shadow:0 10px 22px rgba(44,36,32,.14)}
+.tk-creator-card h3{font-size:17px;margin-bottom:4px}
+.tk-creator-field{font-size:12.5px;color:var(--tk-coral-deep);font-weight:600;margin-bottom:10px}
+.tk-creator-bio{font-size:12.8px;color:var(--tk-ink-soft);line-height:1.6;margin-bottom:14px;min-height:62px}
+.tk-creator-data{display:flex;justify-content:center;gap:22px;font-size:12px;color:var(--tk-ink-soft);border-top:1px dashed var(--tk-line);padding-top:12px}
+.tk-creator-data b{display:block;font-size:16px;color:var(--tk-ink)}
+.tk-creator-card button.tk-more{margin-top:14px;font-size:12.5px;font-weight:700;color:var(--tk-coral-deep);border-bottom:1.5px solid transparent;transition:.2s}
+.tk-creator-card button.tk-more:hover{border-color:var(--tk-coral-deep)}
+
+/* ---------- 故事随笔 ---------- */
+.tk-story-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tk-story{background:#fff;border-radius:20px;padding:26px;border:1px solid var(--tk-line);position:relative;display:flex;flex-direction:column;transition:.28s}
+.tk-story:hover{transform:translateY(-5px);box-shadow:var(--tk-shadow)}
+.tk-story::before{content:"“";position:absolute;top:6px;right:20px;font-size:64px;color:#ffe4d6;font-family:Georgia,serif;line-height:1}
+.tk-story h3{font-size:17px;margin-bottom:12px;position:relative;z-index:1}
+.tk-story p{font-size:13.8px;color:var(--tk-ink-soft);line-height:1.85;flex:1;position:relative;z-index:1}
+.tk-story-foot{margin-top:16px;font-size:12.5px;color:var(--tk-coral-deep);font-weight:600}
+
+/* ---------- 评价 ---------- */
+.tk-comment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tk-comment{background:#fff;border-radius:16px;padding:20px 22px;border:1px solid var(--tk-line);display:flex;gap:14px;transition:.25s}
+.tk-comment:hover{border-color:#ffd8c4;box-shadow:var(--tk-shadow)}
+.tk-comment .tk-avatar{width:42px;height:42px;font-size:16px}
+.tk-comment-body{flex:1}
+.tk-comment-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.tk-comment-head b{font-size:14px}
+.tk-comment-head span{font-size:11.5px;color:#a2958d}
+.tk-comment-body p{font-size:13.5px;color:#4d423c;line-height:1.7}
+.tk-comment-body .tk-reply{margin-top:10px;background:#fff8f1;border-left:3px solid var(--tk-amber);border-radius:0 10px 10px 0;padding:9px 14px;font-size:12.5px;color:var(--tk-ink-soft)}
+.tk-comment-body .tk-reply b{color:var(--tk-coral-deep)}
+
+/* ---------- 动态 & 榜单 ---------- */
+.tk-split{display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:start}
+.tk-timeline{position:relative;padding-left:26px}
+.tk-timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--tk-coral),#ffe0cf)}
+.tk-timeline-item{position:relative;padding-bottom:24px}
+.tk-timeline-item:last-child{padding-bottom:0}
+.tk-timeline-item::before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--tk-coral)}
+.tk-timeline-item time{font-size:12px;font-weight:700;color:var(--tk-coral-deep);letter-spacing:.5px}
+.tk-timeline-item h3{font-size:15.5px;margin:3px 0 5px}
+.tk-timeline-item p{font-size:13.2px;color:var(--tk-ink-soft);line-height:1.65}
+.tk-rank{background:#fff;border-radius:20px;padding:24px;border:1px solid var(--tk-line)}
+.tk-rank h3{font-size:17px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.tk-rank ol{list-style:none}
+.tk-rank li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--tk-line);font-size:13.8px}
+.tk-rank li:last-child{border-bottom:none}
+.tk-rank .tk-num{width:24px;height:24px;border-radius:8px;background:#fff0e8;color:var(--tk-coral-deep);display:grid;place-items:center;font-size:12.5px;font-weight:800;flex:none}
+.tk-rank li:nth-child(1) .tk-num{background:var(--tk-coral);color:#fff}
+.tk-rank li:nth-child(2) .tk-num{background:var(--tk-amber);color:#fff}
+.tk-rank li:nth-child(3) .tk-num{background:var(--tk-mint);color:#fff}
+.tk-rank .tk-rank-title{flex:1}
+.tk-rank .tk-hot{font-size:11.5px;color:#a2958d}
+
+/* ---------- FAQ ---------- */
+.tk-faq{max-width:860px;margin:0 auto}
+.tk-faq details{background:#fff;border:1px solid var(--tk-line);border-radius:14px;padding:0 22px;margin-bottom:14px;transition:.25s;overflow:hidden}
+.tk-faq details[open]{border-color:#ffd8c4;box-shadow:var(--tk-shadow)}
+.tk-faq summary{list-style:none;cursor:pointer;padding:18px 30px 18px 0;font-size:15.5px;font-weight:600;position:relative}
+.tk-faq summary::-webkit-details-marker{display:none}
+.tk-faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:22px;color:var(--tk-coral-deep);font-weight:400;transition:.25s}
+.tk-faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.tk-faq details p{font-size:14px;color:var(--tk-ink-soft);line-height:1.8;padding-bottom:20px;border-top:1px dashed var(--tk-line);padding-top:14px}
+
+/* ---------- 投稿 / 联系 ---------- */
+.tk-join{background:linear-gradient(135deg,#2c2420,#4a3b33);border-radius:28px;padding:clamp(32px,5vw,58px);color:#fff8f1;position:relative;overflow:hidden}
+.tk-join::before{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,71,.32),transparent 70%)}
+.tk-join-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;z-index:1}
+.tk-join h2{font-size:clamp(24px,3vw,34px);margin-bottom:14px}
+.tk-join p{font-size:14.5px;color:#e5d3c7;line-height:1.85;margin-bottom:24px}
+.tk-join-actions{display:flex;gap:14px;flex-wrap:wrap}
+.tk-join .tk-btn-primary{background:linear-gradient(135deg,var(--tk-amber),var(--tk-coral))}
+.tk-join-side{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:24px}
+.tk-join-side h3{font-size:15px;margin-bottom:14px;color:var(--tk-amber)}
+.tk-join-side ul{list-style:none;font-size:13.5px;line-height:2.1;color:#e5d3c7}
+.tk-join-side li::before{content:"✦";color:var(--tk-amber);margin-right:9px;font-size:12px}
+
+/* ---------- 页脚 ---------- */
+.tk-footer{background:#241d19;color:#c9b8ac;padding:56px 0 26px;margin-top:20px}
+.tk-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+.tk-footer h4{font-size:14px;color:#fff8f1;margin-bottom:14px;letter-spacing:.5px}
+.tk-footer p{font-size:12.8px;line-height:1.9;color:#a2928a}
+.tk-footer ul{list-style:none;font-size:13px;line-height:2.2}
+.tk-footer ul a:hover{color:var(--tk-amber)}
+.tk-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:#fff8f1;font-weight:800;font-size:19px}
+.tk-footer-brand .tk-logo-mark{width:36px;height:36px;font-size:17px}
+.tk-footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.3px;color:#8d7d74}
+.tk-footer-bottom a:hover{color:var(--tk-amber)}
+
+/* ---------- Toast / 回到顶部 ---------- */
+.tk-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:var(--tk-ink);color:#ffe9dd;
+  padding:12px 24px;border-radius:999px;font-size:14px;box-shadow:0 14px 30px rgba(44,36,32,.3);
+  opacity:0;pointer-events:none;transition:.3s;z-index:120;white-space:nowrap;
+}
+.tk-toast.show{opacity:1;transform:translate(-50%,0)}
+.tk-top-btn{
+  position:fixed;right:26px;bottom:30px;width:48px;height:48px;border-radius:50%;background:var(--tk-coral);
+  color:#fff;display:grid;place-items:center;font-size:19px;box-shadow:0 12px 26px rgba(255,122,89,.4);
+  opacity:0;pointer-events:none;transition:.3s;z-index:100;
+}
+.tk-top-btn.show{opacity:1;pointer-events:auto}
+.tk-top-btn:hover{transform:translateY(-3px)}
+
+/* ---------- 弹窗 ---------- */
+.tk-modal{position:fixed;inset:0;background:rgba(28,18,14,.6);backdrop-filter:blur(4px);display:none;place-items:center;z-index:130;padding:20px}
+.tk-modal.show{display:grid}
+.tk-modal-box{background:#fff8f1;border-radius:24px;padding:32px;width:min(460px,100%);position:relative;box-shadow:0 30px 70px rgba(0,0,0,.3)}
+.tk-modal-box h3{font-size:20px;margin-bottom:8px}
+.tk-modal-box p{font-size:14px;color:var(--tk-ink-soft);margin-bottom:18px;line-height:1.7}
+.tk-modal-box label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.tk-modal-box input,.tk-modal-box textarea{width:100%;padding:11px 14px;border:1.5px solid var(--tk-line);border-radius:12px;font-family:inherit;font-size:14px;margin-bottom:14px;background:#fff;outline:none}
+.tk-modal-box input:focus,.tk-modal-box textarea:focus{border-color:var(--tk-coral)}
+.tk-modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;background:#fff0e8;color:var(--tk-coral-deep);font-size:17px;display:grid;place-items:center}
+
+@media (max-width:1024px){
+  .tk-hero-grid{grid-template-columns:1fr;gap:36px}
+  .tk-hero-visual{max-width:560px}
+  .tk-focus-grid{grid-template-columns:1fr}
+  .tk-video-grid{grid-template-columns:repeat(2,1fr)}
+  .tk-topic-grid{grid-template-columns:repeat(2,1fr)}
+  .tk-topic:nth-child(1){grid-column:span 2}
+  .tk-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .tk-story-wrap{grid-template-columns:1fr}
+  .tk-split{grid-template-columns:1fr}
+  .tk-join-grid{grid-template-columns:1fr}
+  .tk-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .tk-menu{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;
+    padding:14px 5%;gap:4px;box-shadow:0 18px 30px rgba(44,36,32,.14);border-bottom:1px solid var(--tk-line);
+  }
+  .tk-menu.open{display:flex}
+  .tk-menu a{padding:12px 14px}
+  .tk-nav{position:relative}
+  .tk-menu-toggle{display:grid}
+  .tk-search input{width:130px}
+  .tk-search input:focus{width:150px}
+}
+@media (max-width:680px){
+  .tk-section{padding:54px 0}
+  .tk-video-grid{grid-template-columns:1fr}
+  .tk-focus-side{grid-template-columns:1fr 1fr}
+  .tk-topic-grid{grid-template-columns:1fr}
+  .tk-topic:nth-child(1){grid-column:span 1}
+  .tk-creator-grid{grid-template-columns:1fr 1fr}
+  .tk-comment-grid{grid-template-columns:1fr}
+  .tk-footer-grid{grid-template-columns:1fr}
+  .tk-hero-stats{gap:22px}
+  .tk-hero-float{left:8px;bottom:12px;padding:10px 14px}
+  .tk-hero-pill{right:8px;top:12px;font-size:12px}
+  .tk-search input{width:110px}
+  .tk-logo small{display:none}
+  .tk-hero-actions .tk-btn{padding:11px 20px;font-size:14px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="tk-sticky">
+  <div class="tk-notice">
+    <div class="tk-wrap">
+      <span class="tk-notice-dot"></span>
+      <span><b>官方发布</b>：tickling 冬季「轻互动影像企划」报名通道已开启，新增 18 条品牌精品内容与 4 场创作者直播</span>
+    </div>
+  </div>
+  <header class="tk-header">
+    <nav class="tk-nav tk-wrap" aria-label="主导航">
+      <a class="tk-logo" href="#tk-home">
+        <span class="tk-logo-mark">T</span>
+        <span>tickling<small>轻互动影像社区</small></span>
+      </a>
+      <ul class="tk-menu" id="tkMenu">
+        <li><a href="#tk-home">首页</a></li>
+        <li><a href="#tk-focus">焦点内容</a></li>
+        <li><a href="#tk-topics">专题企划</a></li>
+        <li><a href="#tk-creators">创作者</a></li>
+        <li><a href="#tk-news">企业动态</a></li>
+        <li><a href="#tk-faq">帮助</a></li>
+        <li><a href="#tk-join">联系</a></li>
+      </ul>
+      <div class="tk-nav-tools">
+        <div class="tk-search">
+          <input type="search" id="tkSearchInput" placeholder="搜索影像 / 创作者" aria-label="站内搜索">
+          <button type="button" id="tkSearchBtn" aria-label="搜索">⌕</button>
+          <div class="tk-search-hint" id="tkSearchHint"></div>
+        </div>
+        <button class="tk-menu-toggle" id="tkMenuToggle" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main id="tk-home">
+
+  <!-- 首屏 -->
+  <section class="tk-hero">
+    <div class="tk-wrap tk-hero-grid">
+      <div>
+        <div class="tk-hero-badge"><i></i> tickling 品牌官方网站 · 持续运营中</div>
+        <h1>tickling <span>轻互动影像</span></h1>
+        <p class="tk-hero-slogan">让每一次会心的笑，都被温柔记录</p>
+        <p class="tk-hero-desc">
+          作为国内较早深耕轻互动影像领域的视频品牌，tickling 官方网站以原创内容为核心，汇聚专业创作者与真实生活故事，
+          用高清、温暖、有质感的影像，记录人与人之间那些细碎却闪光的欢乐瞬间。我们相信，轻松与信任，是内容生态最长久的力量。
+        </p>
+        <div class="tk-hero-actions">
+          <a class="tk-btn tk-btn-primary" href="#tk-focus">浏览焦点内容 →</a>
+          <a class="tk-btn tk-btn-ghost" href="#tk-join">创作者投稿</a>
+          <button class="tk-btn tk-btn-ghost" type="button" id="tkShareHero">分享本站</button>
+        </div>
+        <div class="tk-hero-stats">
+          <div><strong>2600+</strong><span>原创影像作品</span></div>
+          <div><strong>480+</strong><span>签约与入驻创作者</span></div>
+          <div><strong>3100万</strong><span>社区累计播放</span></div>
+        </div>
+      </div>
+      <div class="tk-hero-visual">
+        <div class="tk-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffb347'/%3E%3Cstop offset='1' stop-color='%23ff7a59'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='120' r='150' fill='%23fff3e8' opacity='.22'/%3E%3Ccircle cx='150' cy='450' r='190' fill='%23fff3e8' opacity='.14'/%3E%3Ccircle cx='400' cy='255' r='70' fill='%23fff8f1'/%3E%3Cpath d='M400 210 L432 268 L396 268 L424 314' stroke='%23e85c3a' stroke-width='0' fill='none'/%3E%3Cpath d='M360 250 q40 -38 80 0' stroke='%23e85c3a' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='372' cy='228' r='9' fill='%23e85c3a'/%3E%3Ccircle cx='428' cy='228' r='9' fill='%23e85c3a'/%3E%3Cpath d='M356 292 q44 34 88 0' stroke='%23e85c3a' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Ctext x='400' y='420' text-anchor='middle' font-family='sans-serif' font-size='30' font-weight='bold' fill='%23fff8f1' opacity='.92'%3Etickling 品牌主视觉%3C/text%3E%3Ctext x='400' y='456' text-anchor='middle' font-family='sans-serif' font-size='17' fill='%23fff8f1' opacity='.75'%3E轻互动·真实·温暖·陪伴%3C/text%3E%3C/svg%3E" alt="tickling 品牌主视觉：暖橙渐变与笑脸图形构成的官方海报" width="800" height="550">
+        </div>
+        <div class="tk-hero-pill">原创正版 · 高清呈现</div>
+        <div class="tk-hero-float">
+          <b>98.6%</b>
+          <span>社区内容好评率<br>来自用户真实口碑</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析 -->
+  <section class="tk-section" id="tk-about">
+    <div class="tk-wrap">
+      <div class="tk-about">
+        <span class="tk-eyebrow">品牌解析</span>
+        <h2>关于 tickling：一个以轻互动为核心的视频品牌</h2>
+        <p class="tk-about-lead">从一段自然的互动开始，让影像成为关系的润滑剂，也让快乐被看见、被珍藏。</p>
+        <p>
+          tickling 官方网站是一个聚焦轻松互动与日常欢乐内容的视频品牌平台。我们围绕“人与人之间的微小互动”这一主题，
+          持续生产与聚合原创影像，包括生活记录、人物访谈、互动实验、治愈短片、亲子游戏、朋友聚会纪实、宠物陪伴等多元题材。
+          在内容生态的构建上，tickling 坚持以品质为先、以真实为底线，不做过度包装，也不刻意制造情绪，努力让每一条影像都经得起回看。
+        </p>
+        <p>
+          作为企业级品牌门户，本站既是内容展示窗口，也是创作者与用户沟通的社区。我们为签约创作者提供拍摄协助、剪辑支持、
+          版权保护与流量扶植；为普通用户提供便捷的浏览、收藏、评论与投稿入口；为合作品牌提供正向、温暖、有辨识度的内容合作方案。
+          自平台建立以来，tickling 已累计发布原创影像两千余条，覆盖数十个生活场景，形成了稳定且富有活力的内容供给节奏。
+        </p>
+        <p>
+          在 tickling 的内容理念中，“轻”意味着不给人压力，“互动”意味着关系被认真对待。我们观察过一次拍摄现场：两位初次见面的受访者在镜头前略显拘谨，
+          编导没有催促，只是把机位放低、把灯光调暖，然后让工作人员端上两杯热茶。十分钟后，两人开始互相打趣，那句“原来你也怕痒”成为整支短片的开场。
+          类似的瞬间在 tickling 的工作日常中并不少见，它们让我们确信，真实感不是设计出来的，而是被耐心等出来的。
+        </p>
+        <p>
+          我们同样重视社区治理与版权保护。所有上传作品均需通过原创声明与内容审核，官方正版内容统一标注来源与授权信息；
+          平台设有举报与反馈通道，鼓励创作者与用户共同维护健康的内容环境。对企业而言，持续运营不仅是技术层面的稳定，
+          更是对创作者承诺的兑现、对用户信任的回应。tickling 愿意做那个长期在场、不急不躁的品牌，把轻互动这件小事做得专业、做得体面。
+        </p>
+        <p>
+          未来，tickling 将继续在轻互动影像这一垂直领域深耕，围绕“会心一笑”的品牌母题，推出更多原创企划、主题征集与线下共创活动。
+          我们希望官方网站不仅是一个入口，更是一份可以被反复翻阅的品牌档案：它记录创作者的成长，也陪伴每一位用户在日常里找到属于自己的轻松时刻。
+        </p>
+        <div class="tk-about-keys">
+          <span>官方网站</span><span>原创正版</span><span>高清品质</span><span>内容生态</span>
+          <span>创作者社区</span><span>深耕垂直领域</span><span>值得信赖</span><span>持续运营</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="tk-section" id="tk-focus">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">焦点推荐</span>
+          <h2>本周值得慢慢看的影像</h2>
+        </div>
+        <p>由编辑团队与社区共同选出的精品内容，涵盖互动实验、人物故事与生活记录，兼顾专业视角与真实温度。</p>
+      </div>
+      <div class="tk-focus-grid">
+        <article class="tk-focus-main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%234cae9a'/%3E%3Cstop offset='1' stop-color='%232c6a5e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g2)'/%3E%3Ccircle cx='200' cy='150' r='90' fill='%23e6f7f2' opacity='.2'/%3E%3Ccircle cx='640' cy='360' r='130' fill='%23e6f7f2' opacity='.14'/%3E%3Crect x='120' y='210' width='220' height='150' rx='16' fill='%23e6f7f2' opacity='.85'/%3E%3Crect x='460' y='180' width='220' height='180' rx='16' fill='%23fff8f1' opacity='.85'/%3E%3Ccircle cx='230' cy='285' r='26' fill='%234cae9a'/%3E%3Ccircle cx='570' cy='270' r='26' fill='%23ff7a59'/%3E%3Cpath d='M200 340 q30 18 60 0' stroke='%234cae9a' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M540 325 q30 18 60 0' stroke='%23ff7a59' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Ctext x='400' y='90' text-anchor='middle' font-family='sans-serif' font-size='26' font-weight='bold' fill='%23e6f7f2'%3E%E4%B8%80%E6%AC%A1%E9%99%8C%E7%94%9F%E4%BA%BA%E7%9A%84%E4%BA%92%E5%8A%A8%E5%AE%9E%E9%AA%8C%3C/text%3E%3C/svg%3E" alt="陌生人互动实验短片封面：绿色场景中两个对话窗口图形" width="800" height="500">
+          <div class="tk-focus-info">
+            <span class="tk-tag" style="background:rgba(255,255,255,.2);color:#fff">焦点首发</span>
+            <h3>陌生人的三分钟：一次轻互动实验</h3>
+            <p>我们邀请六位从未谋面的路人，用三个简单的小游戏打破沉默。没有剧本，只有真实反应。</p>
+            <div class="tk-meta"><span>创作者：晴天不加糖</span><span>时长 08:24</span><span>播放 126.4 万</span></div>
+          </div>
+        </article>
+        <div class="tk-focus-side">
+          <article class="tk-mini-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23ffe4d6'/%3E%3Ccircle cx='90' cy='80' r='46' fill='%23ff7a59' opacity='.8'/%3E%3Crect x='180' y='120' width='220' height='90' rx='12' fill='%23fff8f1'/%3E%3Cpath d='M200 165 h180' stroke='%23ffb347' stroke-width='8' stroke-linecap='round'/%3E%3Ctext x='240' y='70' text-anchor='middle' font-family='sans-serif' font-size='22' fill='%232c2420' font-weight='bold'%3E%E4%BA%B2%E5%AD%90%E6%97%A5%E5%B8%B8%3C/text%3E%3C/svg%3E" alt="亲子日常记录视频封面：暖色背景与几何图形" width="480" height="270">
+            <div class="tk-mini-body">
+              <h4>爸爸的挠痒痒游戏，成了孩子的睡前仪式</h4>
+              <p>三分钟的睡前互动记录，评论区里全是“我家也这样”。</p>
+              <div class="tk-mini-foot"><span>小满一家</span><span>▶ 52.8万</span></div>
+            </div>
+          </article>
+          <article class="tk-mini-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232c2420'/%3E%3Ccircle cx='360' cy='80' r='64' fill='%23ffb347' opacity='.9'/%3E%3Crect x='60' y='140' width='240' height='70' rx='12' fill='%23ff7a59' opacity='.85'/%3E%3Ctext x='240' y='55' text-anchor='middle' font-family='sans-serif' font-size='21' fill='%23fff8f1' font-weight='bold'%3E%E5%88%9B%E4%BD%9C%E5%B9%95%E5%90%8E%3C/text%3E%3C/svg%3E" alt="创作者幕后特辑封面：深色背景与橙色光斑" width="480" height="270">
+            <div class="tk-mini-body">
+              <h4>一条 90 秒短片，我们拍了 14 个小时</h4>
+              <p>从分镜到收音，幕后团队完整复盘一次轻互动拍摄。</p>
+              <div class="tk-mini-foot"><span>阿栗工作室</span><span>▶ 31.2万</span></div>
+            </div>
+          </article>
+          <article class="tk-mini-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e6f0ff'/%3E%3Cpath d='M0 210 Q120 150 240 200 T480 180 V270 H0Z' fill='%234c7ae0' opacity='.6'/%3E%3Ccircle cx='120' cy='80' r='38' fill='%23ffb347'/%3E%3Ctext x='300' y='110' text-anchor='middle' font-family='sans-serif' font-size='21' fill='%232c2420' font-weight='bold'%3E%E5%9F%8E%E5%B8%82%E6%8E%A2%E7%B4%A2%3C/text%3E%3C/svg%3E" alt="城市漫步探索视频封面：蓝色调与城市轮廓" width="480" height="270">
+            <div class="tk-mini-body">
+              <h4>在城南菜市场，找一种叫“热闹”的快乐</h4>
+              <p>跟着摊主学吆喝，镜头记录下市井里的轻松互动。</p>
+              <div class="tk-mini-foot"><span>走走停停</span><span>▶ 44.6万</span></div>
+            </div>
+          </article>
+          <article class="tk-mini-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23fff8f1'/%3E%3Ccircle cx='240' cy='130' r='64' fill='%23ff7a59' opacity='.18'/%3E%3Ccircle cx='240' cy='130' r='40' fill='%23ffb347'/%3E%3Cpath d='M200 130 q40 -30 80 0' stroke='%23e85c3a' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3Ctext x='240' y='235' text-anchor='middle' font-family='sans-serif' font-size='21' fill='%232c2420' font-weight='bold'%3E%E6%B2%BB%E6%84%88%E5%BD%B1%E5%83%8F%3C/text%3E%3C/svg%3E" alt="治愈影像短片封面：浅色背景与微笑线条图形" width="480" height="270">
+            <div class="tk-mini-body">
+              <h4>当你被生活挠了一下痒：五分钟治愈短片</h4>
+              <p>把烦心事说出来，然后一起笑一笑，好像也没那么难。</p>
+              <div class="tk-mini-foot"><span>晚风信箱</span><span>▶ 78.9万</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="tk-section" id="tk-videos" style="background:#fdf1e7;border-radius:40px 40px 0 0">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">热门内容</span>
+          <h2>tickling 社区正在看的</h2>
+        </div>
+        <p>按主题筛选你感兴趣的影像，点赞与收藏会即时记录在你的本地浏览状态中。</p>
+      </div>
+      <div class="tk-filter-bar" id="tkFilterBar">
+        <button class="active" data-filter="all">全部</button>
+        <button data-filter="互动">轻互动</button>
+        <button data-filter="亲子">亲子</button>
+        <button data-filter="生活">生活记录</button>
+        <button data-filter="宠物">萌宠</button>
+        <button data-filter="访谈">人物访谈</button>
+      </div>
+      <div class="tk-video-grid" id="tkVideoGrid">
+
+        <article class="tk-video-card" data-cat="互动">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23ff7a59'/%3E%3Ccircle cx='520' cy='80' r='100' fill='%23ffb347' opacity='.65'/%3E%3Crect x='80' y='140' width='180' height='120' rx='14' fill='%23fff8f1' opacity='.9'/%3E%3Crect x='300' y='180' width='180' height='80' rx='14' fill='%23fff8f1' opacity='.75'/%3E%3Ctext x='320' y='80' text-anchor='middle' font-family='sans-serif' font-size='26' font-weight='bold' fill='%23fff8f1'%3E%E4%B8%80%E4%B8%AA%E6%8C%BD%E7%97%92%E7%9A%84%E6%B8%B8%E6%88%8F%3C/text%3E%3C/svg%3E" alt="朋友之间挽痒游戏互动短片封面" width="640" height="360">
+            <span class="tk-cover-tag">轻互动</span>
+            <span class="tk-cover-time">05:12</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>朋友之间最怕的挠痒痒挑战，笑到扶墙</h3>
+            <p class="tk-excerpt">四个认识十年的朋友重聚，用一个童年游戏找回最初的默契，也拍下了彼此最没有防备的样子。</p>
+            <div class="tk-card-tags"><span class="tk-tag">友情</span><span class="tk-tag">挑战</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#ff7a59">晴</span>
+              <span class="tk-author">晴天不加糖</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="3284">♡ <span>3284</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="亲子">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23ffe4d6'/%3E%3Ccircle cx='120' cy='110' r='60' fill='%23ffb347' opacity='.8'/%3E%3Cpath d='M240 240 q60 -80 120 0' stroke='%23ff7a59' stroke-width='14' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='300' cy='120' r='34' fill='%23ff7a59' opacity='.85'/%3E%3Ctext x='420' y='100' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E7%9D%A1%E5%89%8D%E4%BB%AA%E5%BC%8F%3C/text%3E%3C/svg%3E" alt="亲子睡前互动仪式记录视频封面" width="640" height="360">
+            <span class="tk-cover-tag">亲子</span>
+            <span class="tk-cover-time">03:48</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>五岁女儿发明了“挠痒痒密码”，每天睡前都要对暗号</h3>
+            <p class="tk-excerpt">从一句“芝麻开门”开始，父女俩发明了一整套只属于他们的语言，也把忙碌的一天轻轻收尾。</p>
+            <div class="tk-card-tags"><span class="tk-tag">成长</span><span class="tk-tag">陪伴</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#4cae9a">满</span>
+              <span class="tk-author">小满一家</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="5417">♡ <span>5417</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="生活">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%234c7ae0'/%3E%3Cpath d='M0 280 Q160 200 320 260 T640 240 V360 H0Z' fill='%23e6f0ff' opacity='.55'/%3E%3Ccircle cx='500' cy='100' r='48' fill='%23ffb347'/%3E%3Crect x='70' y='110' width='150' height='90' rx='12' fill='%23e6f0ff' opacity='.85'/%3E%3Ctext x='320' y='60' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%23e6f0ff'%3E%E5%9F%8E%E5%B8%82%E6%97%A9%E6%99%A8%3C/text%3E%3C/svg%3E" alt="城市清晨生活记录视频封面：蓝色调街景" width="640" height="360">
+            <span class="tk-cover-tag">生活记录</span>
+            <span class="tk-cover-time">06:30</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>六点半的公园：那些互相打招呼的陌生人</h3>
+            <p class="tk-excerpt">晨练的老人、遛狗的青年、赶早班的姑娘，在同一个长椅旁交换了三十秒的问候与笑声。</p>
+            <div class="tk-card-tags"><span class="tk-tag">日常</span><span class="tk-tag">温暖</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#4c7ae0">走</span>
+              <span class="tk-author">走走停停</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="2210">♡ <span>2210</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="宠物">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e8f5e9'/%3E%3Ccircle cx='200' cy='180' r='70' fill='%23a5d6a7'/%3E%3Ccircle cx='180' cy='160' r='12' fill='%232c2420'/%3E%3Ccircle cx='220' cy='160' r='12' fill='%232c2420'/%3E%3Cpath d='M185 200 q15 12 30 0' stroke='%232c2420' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='440' cy='140' r='46' fill='%23ffb347'/%3E%3Ctext x='420' y='300' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E8%90%8C%E5%AE%A0%E6%97%A5%E5%B8%B8%3C/text%3E%3C/svg%3E" alt="猫咪被逗痒的萌宠日常视频封面" width="640" height="360">
+            <span class="tk-cover-tag">萌宠</span>
+            <span class="tk-cover-time">02:55</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>猫对羽毛棒毫无抵抗力的第 108 天</h3>
+            <p class="tk-excerpt">一只三岁橘猫和主人斗智斗勇的日常，镜头下每一次扑空都让人忍不住笑出声。</p>
+            <div class="tk-card-tags"><span class="tk-tag">猫咪</span><span class="tk-tag">治愈</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#a5d6a7;color:#2c2420">柚</span>
+              <span class="tk-author">柚子味的猫</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="8862">♡ <span>8862</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="访谈">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%232c2420'/%3E%3Crect x='80' y='90' width='200' height='180' rx='16' fill='%23ffb347' opacity='.85'/%3E%3Crect x='360' y='120' width='200' height='150' rx='16' fill='%23ff7a59' opacity='.7'/%3E%3Ccircle cx='180' cy='160' r='28' fill='%232c2420'/%3E%3Ccircle cx='460' cy='185' r='28' fill='%232c2420'/%3E%3Ctext x='320' y='60' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%23fff8f1'%3E%E4%BA%BA%E7%89%A9%E8%AE%BF%E8%B0%88%3C/text%3E%3C/svg%3E" alt="人物访谈栏目封面：深色背景与双人剪影" width="640" height="360">
+            <span class="tk-cover-tag">人物访谈</span>
+            <span class="tk-cover-time">12:20</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>对话喜剧演员阿栗：让人笑，是一件严肃的事</h3>
+            <p class="tk-excerpt">从开放麦到镜头前，我们和创作者聊了聊“轻互动”背后的分寸感，以及他理解的幽默伦理。</p>
+            <div class="tk-card-tags"><span class="tk-tag">行业观察</span><span class="tk-tag">创作幕后</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#2c2420">栗</span>
+              <span class="tk-author">阿栗工作室</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="1935">♡ <span>1935</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="互动">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23ffb347'/%3E%3Ccircle cx='160' cy='120' r='54' fill='%23fff8f1' opacity='.8'/%3E%3Ccircle cx='480' cy='240' r='54' fill='%23fff8f1' opacity='.65'/%3E%3Cpath d='M160 120 L480 240' stroke='%232c2420' stroke-width='8' stroke-dasharray='18 12'/%3E%3Ctext x='320' y='80' text-anchor='middle' font-family='sans-serif' font-size='25' font-weight='bold' fill='%232c2420'%3E%E9%99%8C%E7%94%9F%E4%BA%BA%E4%BA%92%E5%8A%A8%3C/text%3E%3C/svg%3E" alt="陌生人街角互动企划视频封面：橙色背景与虚线连线" width="640" height="360">
+            <span class="tk-cover-tag">轻互动</span>
+            <span class="tk-cover-time">09:05</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>给十个陌生人递去一张“挠痒痒券”，会发生什么</h3>
+            <p class="tk-excerpt">一场略带冒险的街头企划，有人警惕，有人大笑，也有人认真地问我们为什么要做这件事。</p>
+            <div class="tk-card-tags"><span class="tk-tag">城市探索</span><span class="tk-tag">企划</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#ff7a59">晚</span>
+              <span class="tk-author">晚风信箱</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="4478">♡ <span>4478</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="生活">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f3e8ff'/%3E%3Ccircle cx='320' cy='180' r='90' fill='%23c9a7eb' opacity='.7'/%3E%3Crect x='250' y='230' width='140' height='60' rx='10' fill='%23fff8f1'/%3E%3Ctext x='320' y='70' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E5%AE%B6%E5%B1%85%E6%97%A5%E5%B8%B8%3C/text%3E%3C/svg%3E" alt="家居生活记录视频封面：淡紫色调与圆形图形" width="640" height="360">
+            <span class="tk-cover-tag">生活记录</span>
+            <span class="tk-cover-time">04:40</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>两个人住的小房子，如何用玩笑化解家务分工</h3>
+            <p class="tk-excerpt">谁洗碗、谁晾衣，他们用一局“猜拳加挠痒”的小游戏解决了争论，也解决了情绪。</p>
+            <div class="tk-card-tags"><span class="tk-tag">关系</span><span class="tk-tag">经验分享</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#c9a7eb;color:#2c2420">木</span>
+              <span class="tk-author">木木与阿岩</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="3690">♡ <span>3690</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="生活">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23fff3e8'/%3E%3Cpath d='M80 280 Q200 180 320 240 T560 220' stroke='%23e85c3a' stroke-width='8' fill='none'/%3E%3Ccircle cx='140' cy='100' r='36' fill='%23ffb347'/%3E%3Ccircle cx='500' cy='120' r='52' fill='%23ff7a59' opacity='.5'/%3E%3Ctext x='320' y='70' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E4%BD%9C%E5%93%81%E7%BB%86%E8%8A%82%3C/text%3E%3C/svg%3E" alt="作品细节教程视频封面：米色背景与曲线图形" width="640" height="360">
+            <span class="tk-cover-tag">教程干货</span>
+            <span class="tk-cover-time">07:16</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>如何拍好一段真实的互动？三招降低镜头的存在感</h3>
+            <p class="tk-excerpt">从机位选择到收音技巧，tickling 编导组把内部培训内容整理成了一份可复用的操作指南。</p>
+            <div class="tk-card-tags"><span class="tk-tag">实用技巧</span><span class="tk-tag">创作幕后</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#e85c3a">编</span>
+              <span class="tk-author">tickling 编导组</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="2755">♡ <span>2755</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tk-video-card" data-cat="亲子">
+          <div class="tk-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e3f2fd'/%3E%3Ccircle cx='220' cy='150' r='52' fill='%2364b5f6'/%3E%3Ccircle cx='430' cy='190' r='38' fill='%23ffb347'/%3E%3Cpath d='M180 260 q120 60 260 0' stroke='%234c7ae0' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3Ctext x='320' y='70' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E4%BA%B2%E5%AD%90%E6%B8%B8%E6%88%8F%3C/text%3E%3C/svg%3E" alt="亲子游戏互动视频封面：浅蓝背景与人物圆形" width="640" height="360">
+            <span class="tk-cover-tag">亲子</span>
+            <span class="tk-cover-time">05:30</span>
+            <span class="tk-cover-play">▶</span>
+          </div>
+          <div class="tk-video-body">
+            <h3>宝宝第一次被爸爸逗笑，镜头记录下这一秒</h3>
+            <p class="tk-excerpt">新手爸妈的育儿日常并不总是浪漫，但这样的瞬间，足以让他们觉得一切都值得。</p>
+            <div class="tk-card-tags"><span class="tk-tag">成长</span><span class="tk-tag">治愈影像</span></div>
+            <div class="tk-video-foot">
+              <span class="tk-avatar" style="background:#64b5f6">果</span>
+              <span class="tk-author">果子爸爸</span>
+              <div class="tk-actions">
+                <button class="tk-like" type="button" data-count="6733">♡ <span>6733</span></button>
+                <button class="tk-save" type="button">☆ 收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="tk-section" id="tk-topics">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">专题企划</span>
+          <h2>围绕同一种快乐的长期企划</h2>
+        </div>
+        <p>专题由 tickling 编辑团队与入驻创作者联合策划，持续更新，欢迎报名参与或提交你的创意。</p>
+      </div>
+      <div class="tk-topic-grid">
+        <article class="tk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9f6e'/%3E%3Cstop offset='1' stop-color='%23e85c3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g3)'/%3E%3Ccircle cx='650' cy='110' r='120' fill='%23fff3e8' opacity='.2'/%3E%3Cpath d='M120 360 q140 -160 280 0 q140 -160 280 0' stroke='%23fff8f1' stroke-width='10' fill='none' opacity='.6'/%3E%3Ctext x='400' y='110' text-anchor='middle' font-family='sans-serif' font-size='34' font-weight='bold' fill='%23fff8f1'%3E%E4%B8%80%E8%B5%B7%E7%AC%91%E4%B8%80%E7%AC%91%3C/text%3E%3C/svg%3E" alt="一起笑一笑专题企划封面：橙红渐变与微笑曲线" width="800" height="500">
+          <div class="tk-topic-shade"></div>
+          <div class="tk-topic-body">
+            <h3>一起笑一笑 · 冬季轻互动企划</h3>
+            <p>征集发生在你身边的轻松瞬间，形式不限，鼓励真实与温柔的表达。已收到 236 份投稿。</p>
+            <span class="tk-topic-state">● 征集中 · 12月20日截止</span>
+          </div>
+        </article>
+        <article class="tk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%234cae9a'/%3E%3Ccircle cx='250' cy='200' r='90' fill='%23e6f7f2' opacity='.3'/%3E%3Crect x='130' y='310' width='240' height='60' rx='12' fill='%23e6f7f2' opacity='.7'/%3E%3Ctext x='250' y='120' text-anchor='middle' font-family='sans-serif' font-size='26' font-weight='bold' fill='%23e6f7f2'%3E%E9%99%8C%E7%94%9F%E4%BA%BA%E5%AE%9E%E9%AA%8C%3C/text%3E%3C/svg%3E" alt="陌生人互动实验专题封面：绿色调与圆形图形" width="500" height="500">
+          <div class="tk-topic-shade"></div>
+          <div class="tk-topic-body">
+            <h3>陌生人的三分钟</h3>
+            <p>用一个小游戏，看看两个陌生人能靠近到什么程度。</p>
+            <span class="tk-topic-state">已更新 8 期</span>
+          </div>
+        </article>
+        <article class="tk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%232c2420'/%3E%3Crect x='90' y='120' width='320' height='220' rx='16' fill='%23ffb347' opacity='.85'/%3E%3Ccircle cx='170' cy='200' r='26' fill='%232c2420'/%3E%3Ccircle cx='330' cy='200' r='26' fill='%232c2420'/%3E%3Ctext x='250' y='410' text-anchor='middle' font-family='sans-serif' font-size='25' font-weight='bold' fill='%23fff8f1'%3E%E5%88%9B%E4%BD%9C%E8%80%85%E5%AF%B9%E8%B0%88%3C/text%3E%3C/svg%3E" alt="创作者对谈专题封面：深色背景与对谈图形" width="500" height="500">
+          <div class="tk-topic-shade"></div>
+          <div class="tk-topic-body">
+            <h3>创作者对谈录</h3>
+            <p>和影像背后的人聊一聊，他们如何理解快乐与分寸。</p>
+            <span class="tk-topic-state">已更新 12 期</span>
+          </div>
+        </article>
+        <article class="tk-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%23f3e8ff'/%3E%3Cpath d='M100 380 Q250 200 400 380' stroke='%239b7bd1' stroke-width='14' fill='none'/%3E%3Ccircle cx='250' cy='180' r='56' fill='%23c9a7eb'/%3E%3Ctext x='250' y='450' text-anchor='middle' font-family='sans-serif' font-size='24' font-weight='bold' fill='%232c2420'%3E%E6%B2%BB%E6%84%88%E5%A4%9C%E8%AF%9D%3C/text%3E%3C/svg%3E" alt="治愈夜话专题封面：淡紫色调与柔和曲线" width="500" height="500">
+          <div class="tk-topic-shade"></div>
+          <div class="tk-topic-body">
+            <h3>治愈夜话</h3>
+            <p>睡前十分钟，听一段温柔的影像故事。</p>
+            <span class="tk-topic-state">每周三更新</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="tk-section" id="tk-creators" style="background:#fdf1e7">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">创作者矩阵</span>
+          <h2>让真实的表达被认真对待</h2>
+        </div>
+        <p>tickling 与来自不同领域的创作者长期合作，他们构成了平台内容生态最重要的部分。</p>
+      </div>
+      <div class="tk-creator-grid">
+        <article class="tk-creator-card">
+          <div class="tk-creator-avatar" style="background:linear-gradient(135deg,#ff7a59,#ffb347)">晴</div>
+          <h3>晴天不加糖</h3>
+          <div class="tk-creator-field">轻互动 / 街头企划</div>
+          <p class="tk-creator-bio">擅长把陌生人之间的尴尬拍成好笑又体面的故事，作品节奏轻快，被社区称为“破冰专业户”。</p>
+          <div class="tk-creator-data"><div><b>86</b>作品</div><div><b>42.6万</b>粉丝</div></div>
+          <button class="tk-more" type="button" data-creator="晴天不加糖">查看创作者档案</button>
+        </article>
+        <article class="tk-creator-card">
+          <div class="tk-creator-avatar" style="background:linear-gradient(135deg,#4cae9a,#64b5f6)">满</div>
+          <h3>小满一家</h3>
+          <div class="tk-creator-field">亲子 / 日常记录</div>
+          <p class="tk-creator-bio">记录五岁女儿与父母之间的细碎日常，坚持不摆拍，用陪伴型内容回应很多年轻家庭的共鸣。</p>
+          <div class="tk-creator-data"><div><b>124</b>作品</div><div><b>61.2万</b>粉丝</div></div>
+          <button class="tk-more" type="button" data-creator="小满一家">查看创作者档案</button>
+        </article>
+        <article class="tk-creator-card">
+          <div class="tk-creator-avatar" style="background:linear-gradient(135deg,#2c2420,#6b5d55)">栗</div>
+          <h3>阿栗工作室</h3>
+          <div class="tk-creator-field">人物访谈 / 创作幕后</div>
+          <p class="tk-creator-bio">由三位前纪录片从业者组成，关注内容行业与创作者生存状态，作品以克制与专业著称。</p>
+          <div class="tk-creator-data"><div><b>47</b>作品</div><div><b>28.9万</b>粉丝</div></div>
+          <button class="tk-more" type="button" data-creator="阿栗工作室">查看创作者档案</button>
+        </article>
+        <article class="tk-creator-card">
+          <div class="tk-creator-avatar" style="background:linear-gradient(135deg,#a5d6a7,#4cae9a);color:#2c2420">柚</div>
+          <h3>柚子味的猫</h3>
+          <div class="tk-creator-field">萌宠 / 治愈影像</div>
+          <p class="tk-creator-bio">一只三岁橘猫的专属摄影师，用固定的低机位与自然光，记录猫咪每天最放松的时刻。</p>
+          <div class="tk-creator-data"><div><b>203</b>作品</div><div><b>93.5万</b>粉丝</div></div>
+          <button class="tk-more" type="button" data-creator="柚子味的猫">查看创作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="tk-section">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">影像随笔</span>
+          <h2>镜头之外的几句话</h2>
+        </div>
+        <p>来自编辑与创作手记的短篇记录，与影像内容彼此呼应。</p>
+      </div>
+      <div class="tk-story-wrap">
+        <article class="tk-story">
+          <h3>把“挠痒痒”拍成一件正经事</h3>
+          <p>选题会上有人提出这个方向时，会议室安静了几秒。它太轻了，轻到不像一个可以立项的内容。但我们最终决定试一试，因为很多关系的破冰，恰恰是从这种不成敬意的身体互动开始的。拍摄当天，我们反复提醒参与者：随时可以喊停。这条原则后来被写进了所有轻互动企划的执行规范里。</p>
+          <div class="tk-story-foot">—— 编导组 · 拍摄手记</div>
+        </article>
+        <article class="tk-story">
+          <h3>为什么我们很少给创作者写脚本</h3>
+          <p>在 tickling 的多数企划里，编导只提供场景、规则与安全边界，不提供台词。我们发现，一旦给出具体的话术，受访者就会开始表演，而表演会迅速稀释掉真实感。当然，这要求前期做足够多的沟通，也要求后期愿意剪掉大段“不够精彩”的素材。慢一点，但值得。</p>
+          <div class="tk-story-foot">—— 内容策略组 · 观察</div>
+        </article>
+        <article class="tk-story">
+          <h3>评论区里，那个说自己很久没笑的人</h3>
+          <p>有一支不起眼的短片下面，有用户留言说，他已经很久没有真心笑过了，看完这段影像，跟着笑了两分钟。我们把这句留言截图放进了内部例会的最后一页。它提醒我们，平台做的并不只是内容分发，有时候，它也承担着一点点陪伴的责任。</p>
+          <div class="tk-story-foot">—— 社区运营组 · 记录</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 + 动态榜单 -->
+  <section class="tk-section" id="tk-news" style="background:#fdf1e7">
+    <div class="tk-wrap">
+      <div class="tk-section-head">
+        <div>
+          <span class="tk-eyebrow">社区与动态</span>
+          <h2>用户怎么说，我们又在做什么</h2>
+        </div>
+        <p>真实的用户评价与企业动态并列呈现，口碑与成长同样重要。</p>
+      </div>
+      <div class="tk-comment-grid" id="tkCommentGrid" style="margin-bottom:36px">
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#ff7a59">林</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>林间小鹿</b><span>2026-11-15 · 社区用户</span></div>
+            <p>关注 tickling 两年了，最喜欢的一点是它从不刻意煽情。很多平台会把温情拍得很满，这里却留白很多，看完反而更舒服。</p>
+          </div>
+        </div>
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#4cae9a">周</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>周末不加班</b><span>2026-11-14 · 创作者</span></div>
+            <p>作为入驻创作者，投稿流程比我想象的顺畅。审核会给具体的修改建议，而不是一句冷冰冰的“不通过”，这点很打动我。</p>
+            <div class="tk-reply"><b>tickling 官方</b>：谢谢你的认可，我们会继续把沟通做细。</div>
+          </div>
+        </div>
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#ffb347">陈</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>陈先生的书房</b><span>2026-11-12 · 社区用户</span></div>
+            <p>内容质量整体在线，专题企划尤其好看。唯一的小建议是希望增加按地区筛选的功能，想看看本地创作者的作品。</p>
+          </div>
+        </div>
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#c9a7eb;color:#2c2420">白</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>白噪音收藏家</b><span>2026-11-10 · 社区用户</span></div>
+            <p>睡前喜欢放几支治愈影像，画面干净，收音也很讲究。能感觉出制作团队在专业度上是下了功夫的。</p>
+          </div>
+        </div>
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#4c7ae0">吴</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>吴桐在路上</b><span>2026-11-08 · 社区用户</span></div>
+            <p>城市探索系列让我重新认识了自己住了十年的地方。原来菜市场里那些吆喝声，也可以被拍得这么有温度。</p>
+          </div>
+        </div>
+        <div class="tk-comment">
+          <span class="tk-avatar" style="background:#2c2420">许</span>
+          <div class="tk-comment-body">
+            <div class="tk-comment-head"><b>许老师的美术课</b><span>2026-11-05 · 合作教师</span></div>
+            <p>带学生一起看了几支轻互动短片做课堂讨论，孩子们对“分寸感”的理解比我预想的还要细腻。感谢平台提供这样的素材。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tk-split">
+        <div>
+          <h3 style="font-size:20px;margin-bottom:20px">企业动态与官方发布</h3>
+          <div class="tk-timeline">
+            <div class="tk-timeline-item">
+              <time>2026-11-18</time>
+              <h3>冬季「轻互动影像企划」正式启动报名</h3>
+              <p>面向所有入驻创作者开放，设置轻互动、亲子、治愈三个方向，入选作品将获得拍摄支持与首页推荐资源。</p>
+            </div>
+            <div class="tk-timeline-item">
+              <time>2026-11-12</time>
+              <h3>平台内容审核规范完成本年度第二次更新</h3>
+              <p>新增关于身体互动类内容的拍摄与呈现指引，明确知情同意、可随时中止与成片复核三项要求。</p>
+            </div>
+            <div class="tk-timeline-item">
+              <time>2026-11-06</time>
+              <h3>官方发布：新增 18 条品牌精品内容</h3>
+              <p>涵盖人物访谈、创作幕后与生活记录，均标注原创与授权信息，可在对应专题页集中浏览。</p>
+            </div>
+            <div class="tk-timeline-item">
+              <time>2026-10-28</time>
+              <h3>与四家内容机构达成年度合作</h3>
+              <p>合作方向包括联合出品、创作者孵化与版权互认，进一步丰富平台的内容供给与专业度。</p>
+            </div>
+            <div class="tk-timeline-item">
+              <time>2026-10-15</time>
+              <h3>创作者成长计划第二期结课</h3>
+              <p>本期共有 42 位创作者完成课程，结课作品在社区获得平均 3.7 万次播放，口碑反馈良好。</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="tk-rank">
+            <h3>🔥 本周热度榜</h3>
+            <ol>
+              <li><span class="tk-num">1</span><span class="tk-rank-title">朋友之间的挠痒痒挑战</span><span class="tk-hot">126.4万</span></li>
+              <li><span class="tk-num">2</span><span class="tk-rank-title">猫对羽毛棒的第 108 天</span><span class="tk-hot">98.2万</span></li>
+              <li><span class="tk-num">3</span><span class="tk-rank-title">宝宝第一次被爸爸逗笑</span><span class="tk-hot">87.5万</span></li>
+              <li><span class="tk-num">4</span><span class="tk-rank-title">当你被生活挠了一下痒</span><span class="tk-hot">78.9万</span></li>
+              <li><span class="tk-num">5</span><span class="tk-rank-title">六点半的公园陌生人</span><span class="tk-hot">64.1万</span></li>
+            </ol>
+          </div>
+          <div class="tk-rank" style="margin-top:20px">
+            <h3>🌟 新人创作者榜</h3>
+            <ol>
+              <li><span class="tk-num">1</span><span class="tk-rank-title">果子爸爸</span><span class="tk-hot">本月 +1.8万</span></li>
+              <li><span class="tk-num">2</span><span class="tk-rank-title">木木与阿岩</span><span class="tk-hot">本月 +1.2万</span></li>
+              <li><span class="tk-num">3</span><span class="tk-rank-title">晚风信箱</span><span class="tk-hot">本月 +0.9万</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="tk-section" id="tk-faq">
+    <div class="tk-wrap">
+      <div class="tk-section-head" style="justify-content:center;text-align:center">
+        <div style="margin:0 auto">
+          <span class="tk-eyebrow">帮助中心</span>
+          <h2>常见问题</h2>
+        </div>
+      </div>
+      <div class="tk-faq">
+        <details>
+          <summary>tickling 是一个什么样的平台？</summary>
+          <p>tickling 是一个以轻互动影像为核心的视频品牌社区，官方网站集中展示原创内容、专题企划、创作者档案与企业动态，同时提供投稿、收藏、评论等社区功能，致力于为创作者与用户搭建高品质的内容生态。</p>
+        </details>
+        <details>
+          <summary>如何向平台提交原创作品？</summary>
+          <p>点击页面中的“创作者投稿”入口，填写作品基本信息、原创声明与授权说明即可。编辑团队会在三个工作日内完成初审，并通过站内消息反馈修改建议或收录结果。</p>
+        </details>
+        <details>
+          <summary>平台对轻互动类内容有哪些拍摄要求？</summary>
+          <p>所有涉及身体互动的拍摄均需取得参与者明确同意，现场需保留随时中止的权利，成片发布前须经当事人复核。相关规范已写入平台内容审核指引，创作者可在投稿页面查阅完整版本。</p>
+        </details>
+        <details>
+          <summary>收藏和点赞会被保存吗？</summary>
+          <p>本页面的点赞与收藏为前端交互演示，状态保存在你当前浏览器的本地存储中，不会上传至服务器，也不会影响创作者的真实数据。</p>
+        </details>
+        <details>
+          <summary>企业或品牌可以如何合作？</summary>
+          <p>我们提供联合出品、专题共创、创作者联动与内容授权等多种合作形式，优先选择与品牌调性一致、尊重创作者权益的方案。可在“联系与投稿”区域留下合作需求。</p>
+        </details>
+        <details>
+          <summary>平台如何保护原创作品版权？</summary>
+          <p>所有收录内容均需完成原创声明，官方正版内容统一标注来源与授权信息。平台设置举报与反馈通道，对侵权行为采取下架、公示与限制投稿等措施，并协助创作者进行后续维权。</p>
+        </details>
+        <details>
+          <summary>为什么有的内容标注“持续更新”？</summary>
+          <p>专题企划通常为长期项目，会按照既定节奏持续收录新作品。标注“持续更新”意味着该专题仍在运营中，你可以定期回访查看最新内容。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 / 联系 -->
+  <section class="tk-section" id="tk-join">
+    <div class="tk-wrap">
+      <div class="tk-join">
+        <div class="tk-join-grid">
+          <div>
+            <h2>把你的轻松时刻，交给 tickling</h2>
+            <p>
+              无论你是专业创作者，还是刚刚拿起手机记录生活的普通人，只要你相信真实与温柔的力量，
+              这里都愿意为你的作品留一个位置。投稿通道长期开放，官方审核团队会认真对待每一份提交。
+            </p>
+            <div class="tk-join-actions">
+              <button class="tk-btn tk-btn-primary" type="button" id="tkOpenSubmit">立即投稿 →</button>
+              <button class="tk-btn tk-btn-ghost" type="button" id="tkOpenContact" style="border-color:#ffb347;color:#ffb347;background:transparent">合作与联系</button>
+              <button class="tk-btn tk-btn-ghost" type="button" id="tkCopyLink" style="border-color:rgba(255,255,255,.4);color:#fff8f1;background:transparent">复制本站链接</button>
+            </div>
+          </div>
+          <aside class="tk-join-side">
+            <h3>官方合作信息</h3>
+            <ul>
+              <li>投稿邮箱：creator@tickling.example</li>
+              <li>商务合作：partner@tickling.example</li>
+              <li>工作时间：周一至周五 10:00–19:00</li>
+              <li>办公地址：杭州市滨江区创意园 B 座 8 层</li>
+              <li>企业主体：tickling 影像文化有限公司</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="tk-footer">
+  <div class="tk-wrap">
+    <div class="tk-footer-grid">
+      <div>
+        <div class="tk-footer-brand"><span class="tk-logo-mark">T</span> tickling</div>
+        <p>
+          tickling 官方网站，轻互动影像社区与视频品牌平台。我们以原创正版内容为核心，
+          深耕轻互动这一垂直领域，持续为创作者与用户提供高品质、值得信赖的内容生态。
+        </p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#tk-home">首页</a></li>
+          <li><a href="#tk-focus">焦点内容</a></li>
+          <li><a href="#tk-videos">热门视频</a></li>
+          <li><a href="#tk-topics">专题企划</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌与帮助</h4>
+        <ul>
+          <li><a href="#tk-creators">创作者矩阵</a></li>
+          <li><a href="#tk-news">企业动态</a></li>
+          <li><a href="#tk-faq">帮助中心</a></li>
+          <li><a href="#tk-join">联系与投稿</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <p>
+          企业主体：tickling 影像文化有限公司<br>
+          品牌口号：让每一次会心的笑，都被温柔记录<br>
+          官方网站 · 持续运营中
+        </p>
+      </div>
+    </div>
+    <div class="tk-footer-bottom">
+      <span>© 2026 tickling 影像文化有限公司 · 版权所有</span>
+      <span>内容均为原创正版，转载请联系官方授权 · 更新于 2026-11-19</span>
+    </div>
+  </div>
+</footer>
+
+<div class="tk-toast" id="tkToast" role="status" aria-live="polite"></div>
+<button class="tk-top-btn" id="tkTopBtn" aria-label="回到顶部">↑</button>
+
+<div class="tk-modal" id="tkModal" role="dialog" aria-modal="true" aria-labelledby="tkModalTitle">
+  <div class="tk-modal-box">
+    <button class="tk-modal-close" id="tkModalClose" aria-label="关闭">✕</button>
+    <h3 id="tkModalTitle">投稿</h3>
+    <p id="tkModalDesc">填写简要信息，我们的编辑团队会在三个工作日内与你联系。</p>
+    <form id="tkModalForm">
+      <label for="tkFormName">你的称呼</label>
+      <input id="tkFormName" type="text" placeholder="如：晴天不加糖" required>
+      <label for="tkFormMsg">作品简介 / 合作需求</label>
+      <textarea id="tkFormMsg" rows="3" placeholder="简要描述你的作品主题或合作方向" required></textarea>
+      <button class="tk-btn tk-btn-primary" type="submit" style="width:100%">提交</button>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('tkToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var menuToggle = document.getElementById('tkMenuToggle');
+  var menu = document.getElementById('tkMenu');
+  if(menuToggle && menu){
+    menuToggle.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        menu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.textContent = '☰';
+      }
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('tkSearchInput');
+  var searchBtn = document.getElementById('tkSearchBtn');
+  var searchHint = document.getElementById('tkSearchHint');
+  var topics = ['轻互动','亲子','萌宠','治愈','城市探索','人物访谈','创作幕后','生活记录','专题企划','创作者'];
+
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchHint.innerHTML = '<strong>热门搜索</strong>' + topics.slice(0,5).map(function(t){return '#'+t;}).join('　');
+      searchHint.classList.add('show');
+      return;
+    }
+    var hit = topics.filter(function(t){ return t.indexOf(q) !== -1 || q.indexOf(t) !== -1; });
+    if(hit.length){
+      searchHint.innerHTML = '<strong>找到相关主题</strong>' + hit.map(function(t){return '#'+t;}).join('　') + '<br>可点击上方导航进入对应板块。';
+    }else{
+      searchHint.innerHTML = '<strong>暂未找到「'+ q.replace(/[<>&]/g,'') +'」</strong>试试：轻互动、亲子、萌宠、治愈。';
+    }
+    searchHint.classList.add('show');
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+    searchInput.addEventListener('focus', function(){ if(!searchInput.value){ doSearch(); } });
+  }
+  document.addEventListener('click', function(e){
+    if(searchHint && !searchHint.contains(e.target) && e.target !== searchInput && e.target !== searchBtn){
+      searchHint.classList.remove('show');
+    }
+  });
+
+  /* 标签筛选 */
+  var filterBar = document.getElementById('tkFilterBar');
+  var grid = document.getElementById('tkVideoGrid');
+  if(filterBar && grid){
+    filterBar.addEventListener('click', function(e){
+      var btn = e.target.closest('button[data-filter]');
+      if(!btn) return;
+      filterBar.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      grid.querySelectorAll('.tk-video-card').forEach(function(card){
+        var show = f === 'all' || card.getAttribute('data-cat') === f;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  function toggleLike(btn){
+    var base = parseInt(btn.getAttribute('data-count'),10) || 0;
+    var span = btn.querySelector('span');
+    var liked = btn.classList.contains('liked');
+    var num = liked ? base : base + 1;
+    btn.classList.toggle('liked');
+    btn.innerHTML = (liked ? '♡ ' : '♥ ') + '<span>' + num + '</span>';
+    showToast(liked ? '已取消点赞' : '已点赞，感谢你的喜欢');
+  }
+  function toggleSave(btn){
+    var saved = btn.classList.toggle('saved');
+    btn.innerHTML = saved ? '♥ 已收藏' : '☆ 收藏';
+    showToast(saved ? '已加入收藏' : '已取消收藏');
+  }
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('.tk-like');
+    if(likeBtn){ toggleLike(likeBtn); return; }
+    var saveBtn = e.target.closest('.tk-save');
+    if(saveBtn){ toggleSave(saveBtn); return; }
+  });
+
+  /* 创作者档案弹窗 */
+  var creatorInfo = {
+    '晴天不加糖': '轻互动与街头企划创作者，入驻 tickling 两年，代表作《陌生人的三分钟》系列。擅长在真实场景中寻找轻松的笑点，作品累计播放超过 1800 万次。',
+    '小满一家': '亲子日常记录创作者，坚持不摆拍的家庭影像。代表作《睡前仪式》系列，因真实细腻的记录方式被大量家庭用户收藏。',
+    '阿栗工作室': '由三位前纪录片从业者组成的内容团队，专注人物访谈与行业观察。作品以克制、专业见长，长期为平台提供深度内容支持。',
+    '柚子味的猫': '萌宠治愈影像创作者，以固定低机位与自然光记录橘猫柚子日常。单条作品最高播放 320 万次，是平台口碑最稳定的创作者之一。'
+  };
+  document.addEventListener('click', function(e){
+    var more = e.target.closest('.tk-more');
+    if(!more) return;
+    var name = more.getAttribute('data-creator');
+    openModal(name + ' · 创作者档案', creatorInfo[name] || '该创作者的详细档案正在整理中。');
+  });
+
+  /* 弹窗 */
+  var modal = document.getElementById('tkModal');
+  var modalTitle = document.getElementById('tkModalTitle');
+  var modalDesc = document.getElementById('tkModalDesc');
+  var modalForm = document.getElementById('tkModalForm');
+  var modalClose = document.getElementById('tkModalClose');
+  function openModal(title, desc){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modal.classList.add('show');
+  }
+  function closeModal(){ if(modal) modal.classList.remove('show'); }
+  if(modalClose){ modalClose.addEventListener('click', closeModal); }
+  if(modal){ modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); }); }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var openSubmit = document.getElementById('tkOpenSubmit');
+  if(openSubmit){
+    openSubmit.addEventListener('click', function(){
+      openModal('创作者投稿', '填写简要信息后，编辑团队会在三个工作日内与你联系，并给出具体的修改建议。');
+    });
+  }
+  var openContact = document.getElementById('tkOpenContact');
+  if(openContact){
+    openContact.addEventListener('click', function(){
+      openModal('合作与联系', '商务合作请说明品牌、合作形式与大致周期，我们会优先回复与平台调性匹配的方案。邮箱：partner@tickling.example');
+    });
+  }
+  if(modalForm){
+    modalForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('tkFormName').value.trim();
+      closeModal();
+      modalForm.reset();
+      showToast(name ? ('已收到，' + name + '，我们会尽快联系你') : '已收到，我们会尽快联系你');
+    });
+  }
+
+  /* 复制链接 */
+  function copyLink(){
+    var url = window.location.href.split('#')[0];
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){ showToast('本站链接已复制'); }, function(){ showToast('复制失败，请手动复制地址栏'); });
+    }else{
+      showToast('当前浏览器不支持自动复制，请手动复制地址栏');
+    }
+  }
+  var copyBtn = document.getElementById('tkCopyLink');
+  if(copyBtn){ copyBtn.addEventListener('click', copyLink); }
+
+  /* 分享 */
+  var shareHero = document.getElementById('tkShareHero');
+  if(shareHero){
+    shareHero.addEventListener('click', function(){
+      copyLink();
+      showToast('链接已复制，可分享至微信 / 微博 / QQ');
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('tkTopBtn');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 500){ topBtn.classList.add('show'); }
+    else{ topBtn.classList.remove('show'); }
+  }, { passive:true });
+  if(topBtn){
+    topBtn.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+  }
+})();
+</script>
+</body>
+  </html>
